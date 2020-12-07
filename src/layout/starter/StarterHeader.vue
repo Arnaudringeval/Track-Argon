@@ -1,5 +1,11 @@
 <template>
     <header class="header-global">
+        <img id="logoa" src="images/logo_track.png" alt="">
+        <div class="brand">
+            <h1 id="titrea">TRACK</h1>
+            <h2 class="namea">Touring Race All Competition's Keys</h2>
+            <h3 id="h3"> </h3>
+        </div>
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
                 <img src="img/brand/white.png">

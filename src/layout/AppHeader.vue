@@ -1,8 +1,14 @@
 <template>
     <header class="header-global">
+        <img id="logoa" src="img/header/logo_track.png" alt="">
+        <div class="brand">
+            <h1 id="titrea">TRACK</h1>
+            <h2 class="namea">Touring Race All Competition's Keys</h2>
+            <h3 id="h3"> </h3>
+        </div>
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-                <img src="img/brand/white.png" alt="logo">
+                
             </router-link>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
@@ -98,6 +104,42 @@
                 </li>
             </ul>
         </base-nav>
+
+<ul id="menus">
+            <li>les bases
+                <ul>
+                    <li><a href="motorisation.html">motorisation</a></li>
+                    <li><a href="transmission.html">transmission</a></li>
+                    <li><a href="pneus.html">pneus</a></li>
+                    <li><a href="carrosseries.html">carrosseries</a></li>
+                    <li><a href="reglages.html">réglages</a></li>
+                </ul>
+            </li>
+            <li id="regl">réglements
+                <ul id="réglements">
+                    <li id="ffvrc"><a href="https://www.ffvrc.fr/fr/disciplines-sur-piste/1-10-1-12-electrique-piste/356-rglt.html" target="_blank">FFVRC</a></li>
+                    <li><a href="https://www.efra.ws/handbook/" target="_blank">EFRA</a></li>
+                    <li><a href="https://ets.redrc.net/rules/" target="_blank">ETS</a></li>
+                    <li><a href="https://www.ifmar.org/rules/" target="_blank">IFMAR</a></li>
+                </ul>
+            </li>
+            <li><a href="tutos.html">tutos</a>
+
+            </li>
+            <li>vidéos
+                <ul>
+                    <li><a href="championnatdumonde.html">Championnat du monde</a></li>
+                    <li><a href="championnatdeurope.html">Chapionnat d'Europe</a></li>
+                    <li><a href="ets.html">ETS</a></li>
+                    <li><a href="autres.html">Autres</a></li>
+                </ul>
+
+            </li>
+            <li><a href="calendrier.html">calendrier</a>
+
+            </li>
+        </ul>
+
     </header>
 </template>
 <script>
@@ -114,4 +156,135 @@ export default {
 };
 </script>
 <style>
+.brand {
+        text-align: center;
+    }
+#menus {
+        display: none;
+    }
+header {
+        display: flex;
+        position: fixed;
+        flex-direction: column-reverse;
+        justify-content: center;
+        background-color: #cdcdcd;
+        padding: 0 0 0 0;
+        z-index: 7;
+        width: 100%;
+    }
+#logoa {
+        align-self: center;
+        width: 369px;
+        height: 238px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+#titrea {
+        font-size: 75px;
+        margin: 0px 0 0 0px;
+        font-family: 'Arial black', Helvetica, sans-serif;
+        font-style: italic;
+        color: #318ce7;
+    }
+.namea{
+    display: none;
+    color: #318ce7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    padding: -5px 0 0 5px;
+    font-weight: bold;
+    }
+    @media screen and (min-width: 690px) and (max-width: 992px){
+        .namea {
+            display: block;}
+        header {
+            display: flex;
+            flex-direction: row;
+        }
+}
+@media screen and (min-width: 992px) {
+.navbar-main{
+    display: none;
+}
+
+
+#menus {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 0 0 0 0;
+            left: 10%;
+            right: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            position: fixed;
+            padding: 0 0 0 0;
+            width: 80%;
+            background-color: #cdcdcd;
+        }
+        #menus ul {
+            position: absolute;
+            display: none;
+            left: 0;
+            z-index: 1000;
+        }
+        #menus,
+        #menus ul {
+            list-style: none;
+            text-align: center;
+        }
+        #menus li {
+            display: inline-block;
+            background-color: #318ce7;
+            padding: 5px 0 5px 0;
+            color: #ffffff;
+            font-weight: bold;
+            width: 110px;
+        }
+        #menus ul li:first-child {
+            margin-top: 5px;
+        }
+        #menus ul li:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+        #menus li {
+            display: inline-block;
+            position: relative;
+            border-radius: 8px 8px 0 0;
+        }
+        #menus ul li {
+            display: inherit;
+            text-align: center;
+            border-radius: 0;
+        }
+        #menus li:hover ul {
+            display: block;
+        }
+        #menus a {
+            text-decoration: none;
+            display: block;
+            color: #ffffff;
+        }
+        #menus li ul {
+            text-align: center;
+        }
+        #menus li li a {
+            font-weight: normal;
+        }
+        #menus li li:hover a {
+            font-style: italic;
+            text-transform: inherit;
+            font-weight: normal;
+        }
+
+
+header {
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 34px 0;
+            width: 100%;
+            justify-content: center;
+        }
+.namea {
+            display: block;}
+}
 </style>
