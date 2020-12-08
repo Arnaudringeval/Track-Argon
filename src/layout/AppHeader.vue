@@ -275,16 +275,5 @@ header {
             text-transform: inherit;
             font-weight: normal;
         }
-
-
-header {
-            display: flex;
-            flex-direction: column;
-            padding: 0 0 34px 0;
-            width: 100%;
-            justify-content: center;
-        }
-.namea {
-            display: block;}
 }
 </style>

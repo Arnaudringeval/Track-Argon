@@ -24,6 +24,13 @@ import './registerServiceWorker'
 Vue.config.productionTip = false;
 Vue.use(Argon);
 new Vue({
-  router,
-  render: h => h(App)
+    router,
+    render: h => h(App)
 }).$mount("#app");
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+
+Vue.use(BootstrapVue)
+
+Vue.use(IconsPlugin)
